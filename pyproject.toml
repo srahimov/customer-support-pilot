@@ -1,0 +1,27 @@
+[project]
+name = "customer-support-pilot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Your name", email = "steverahimovs@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.4.6",
+    "langchain-openai>=1.7.2",
+    "langgraph>=1.2.15",
+    "langgraph-checkpoint-postgres>=3.2.0",
+    "langsmith>=0.14.9",
+    "psycopg-pool>=3.3.3",
+    "psycopg[binary]>=3.3.6",
+    "pydantic>=2.14.1",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+customer-support-pilot = "customer_support_pilot.main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
